@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<!-- Para usar o MySQL é só descomentar
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/hibernate_statistics" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			 -->
+			 
+			 <!-- Para usar o MySQL comente essas duas linhas -->
+			<property name="javax.persistence.jdbc.driver" 		value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.url" 		value="jdbc:hsqldb:minicurso_jsf_jpa;shutdown=true" />
+			
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="root" />
+			
+			<property name="hibernate.generate_statistics" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			
+		</properties>
+	</persistence-unit>
+	
+</persistence>
